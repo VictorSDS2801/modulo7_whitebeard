@@ -26,6 +26,6 @@ function searchbook(books) {
         console.log("Nenhum livro encontrado.")
     }
 
-    resultados.forEach(book => console.log(book))
+    result.forEach(book => console.log(book))
 }
 module.exports = searchbook
