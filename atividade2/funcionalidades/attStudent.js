@@ -1,9 +1,10 @@
 const prompt = require("prompt-sync")()
+const idexiste = require("./idexiste")
 
 function attStudent(estudantes) {
     let id = Number(prompt("Digite o id do estudante que você deseja atualizar: "))
 
-    if (isNaN(id) || id > estudantes.length) {
+    if (isNaN(id) || !idexiste(estudantes, id)) {
         console.log("Digite um id disponível!")
         return attStudent(estudantes)
     }
