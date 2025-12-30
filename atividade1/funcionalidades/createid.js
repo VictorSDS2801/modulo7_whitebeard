@@ -1,6 +1,8 @@
-
 function createid(books) {
-    const posicaoMaxima = books.findIndex(item => item.quantity === Math.max(...books.map(i => i.quantity)));
-    return id
+    if (books.length === 0) return 1;
+
+    const maiorId = Math.max(...books.map(book => book.id));
+    return maiorId + 1;
 }
-module.exports = createid
+
+module.exports = createid;
