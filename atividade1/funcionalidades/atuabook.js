@@ -1,5 +1,6 @@
 const prompt = require("prompt-sync")()
 const idexiste = require("./idexiste")
+const buscarposicao = require("./buscarposicao")
 
 function atuabook(books) {
     let id = Number(prompt("Digite o id do livro que você deseja atualizar: "))
@@ -18,7 +19,7 @@ function atuabook(books) {
         return atuabook(books)
     }
 
-    let posicao = id - 1
+    let posicao = buscarposicao(books, id)
 
     books[posicao].title = newtitle
     books[posicao].author = newauthor
