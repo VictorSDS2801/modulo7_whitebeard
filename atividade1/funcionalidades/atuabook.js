@@ -1,8 +1,9 @@
 const prompt = require("prompt-sync")()
+const idexiste = require("./idexiste")
 
 function atuabook(books) {
     let id = Number(prompt("Digite o id do livro que você deseja atualizar: "))
-    if (id > books.length || isNaN(id) || id < 1) {
+    if (isNaN(id) || !idexiste(books, id)) {
         console.log("Digite um id compatível.")
         return atuabook(books)
     }
