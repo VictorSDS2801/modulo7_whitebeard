@@ -2,7 +2,7 @@ const prompt = require("prompt-sync")()
 
 function searchbook(books) {
     let key = prompt("Buscar por (title, author, year, genre): ").toLowerCase()
-
+    key = key.toLowerCase()
     const validKeys = ["title", "author", "year", "genre"]
 
     if (!validKeys.includes(key)) {
@@ -26,7 +26,6 @@ function searchbook(books) {
         console.log("Nenhum livro encontrado.")
     }
 
-    return result
-
+    resultados.forEach(book => console.log(book))
 }
 module.exports = searchbook

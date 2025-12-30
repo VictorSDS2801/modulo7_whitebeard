@@ -45,8 +45,8 @@ function programa() {
             programa()
             break
         case '5':
-            const resultados = searchbook(books)
-            resultados.forEach(book => console.log(book))
+            searchbook(books)
+            
             programa()
             break
         case '6': 

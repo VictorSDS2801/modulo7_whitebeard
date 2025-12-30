@@ -2,7 +2,7 @@ const prompt = require("prompt-sync")()
 
 function searchStudent(estudantes) {
     let chave = prompt("Digite a chave que você deseja buscar (name, registration, course): ")
-
+    chave = chave.toLowerCase()
     let posspesqui = ["name", "registration", "course"]
 
     if (!posspesqui.includes(chave)) {
@@ -24,6 +24,6 @@ function searchStudent(estudantes) {
         console.log("Nenhum estudante encontrado.")
     }
 
-    return resultado
+    resultado.forEach(estudante => console.log(estudante))
 }
 module.exports = searchStudent
