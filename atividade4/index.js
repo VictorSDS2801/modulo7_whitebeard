@@ -1,4 +1,10 @@
 const prompt = require("prompt-sync")()
+const addproduct = require("./funcionalidades/addproduct")
+const listproducts = require("./funcionalidades/listproducts")
+const attproduct = require("./funcionalidades/attproduct")
+const delproduct = require("./funcionalidades/delproduct")
+const searchproduct = require("./funcionalidades/searchproduct")
+const quit = require("./funcionalidades/quit")
 
 let products = [
     {id: 1, name: "Arroz", category: "alimento", price: 2, stock: 100},
