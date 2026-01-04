@@ -6,3 +6,4 @@ function pause() {
         input = prompt("\nPressione apenas ENTER para continuar...")
     } while (input !== "")
 }
+module.exports = pause
